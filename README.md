@@ -2,7 +2,7 @@
 
 An interactive quiz website built with HTML, CSS and JavaScript. Pick a topic, answer four questions, and get instant feedback with an explanation for every answer.
 
-**Live site:** https://your-project-name.vercel.app
+**Live site:** https://webquiz-hub.vercel.app
 
 ## Features
 
