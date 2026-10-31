@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebQuiz Hub - Test your web skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#quiz">WebQuiz Hub</a>
+        <nav aria-label="Main">
+            <a href="#quiz">Quiz</a>
+            <a href="#topics">Topics</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="quiz" class="hero">
+            <div class="hero-text">
+                <h1>How well do you know the web?</h1>
+                <p>Pick a topic, answer four questions and see your score. Each answer is explained straight away, so you learn as you go.</p>
+            </div>
+
+            <div class="quiz-card">
+                <div class="tabs" role="tablist" aria-label="Quiz topic">
+                    <button role="tab" class="tab active" data-topic="html" aria-selected="true">HTML</button>
+                    <button role="tab" class="tab" data-topic="css" aria-selected="false">CSS</button>
+                    <button role="tab" class="tab" data-topic="js" aria-selected="false">JavaScript</button>
+                </div>
+
+                <div id="quizBody">
+                    <div class="progress"><div id="progressBar"></div></div>
+                    <p id="counter" class="counter"></p>
+                    <h2 id="question"></h2>
+                    <div id="options" class="options"></div>
+                    <p id="feedback" class="feedback" role="status"></p>
+                    <button id="nextBtn" class="btn" hidden>Next question</button>
+                </div>
+
+                <div id="result" class="result" hidden>
+                    <p class="score" id="scoreText"></p>
+                    <p id="scoreNote"></p>
+                    <button id="retryBtn" class="btn">Try this topic again</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="topics" class="topics">
+            <h2>Choose what to practise</h2>
+            <div class="topic-grid">
+                <article>
+                    <h3>HTML</h3>
+                    <p>Tags, attributes and forms: the structure of every page.</p>
+                    <p class="best" data-best="html"></p>
+                </article>
+                <article>
+                    <h3>CSS</h3>
+                    <p>Colours, the box model, selectors and flexbox layout.</p>
+                    <p class="best" data-best="css"></p>
+                </article>
+                <article>
+                    <h3>JavaScript</h3>
+                    <p>Variables, comparison, arrays and working with the DOM.</p>
+                    <p class="best" data-best="js"></p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Suggest a question</h2>
+            <p>Have a question we should add? Send it to us.</p>
+            <form id="contactForm" novalidate>
+                <label for="cName">Your name</label>
+                <input id="cName" type="text" autocomplete="name">
+                <label for="cEmail">Email</label>
+                <input id="cEmail" type="email" autocomplete="email">
+                <label for="cMsg">Your question</label>
+                <textarea id="cMsg" rows="4"></textarea>
+                <button class="btn" type="submit">Send suggestion</button>
+                <p id="formMsg" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>WebQuiz Hub. Built with HTML, CSS and JavaScript for Web Technologies (CSC-332).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
